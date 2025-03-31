@@ -1,0 +1,219 @@
+/* styles for header, nav, main, footer */
+header, nav, main, footer { display: block; /* display a block in the header, nav, main, footer  */ }
+
+header a {text-decoration: none;}
+header a:link {color:#231814;}
+header a:visited {color:#231814;}
+header a:hover {color:#FEF6C2;} 
+
+/* styles for the body */
+body { background-color: #29353C; /* set background color */
+       font-family: Lucida, Arial, sans-serif; /* define font family */
+}
+/* styles for the wrapper */
+#wrapper { padding: 0; /* add padding*/
+		   background-color: #AAC7D8; /* set background color */
+		   color: #330000; /* set color */
+		   box-shadow: 5px 5px 5px #000000; /* set box shadow */
+}
+/* styles for headings */
+h1 { background-image: url(../images/logo3.jpg); /* set background image */
+     background-repeat: no-repeat; /* set background repeat */
+     background-color: #AAC7D8; /* set background color */
+	 height: 110px; /* set height */
+	 font-family: Monospace, "Times New Roman", serif; /* define font family */
+	 font-size: 2.8em; /* set font size for h1 */
+     padding-left: 220px; /* add left padding */
+	 padding-top: 20px; /* add top padding */
+	 text-shadow: 3px 3px 3px #90745D; /* set text shadow */
+	 margin-bottom: 0; /* set bottom margin */
+}
+
+#greeting {
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: Anastasia Kuznetsova;
+
+margin-top: 10px; }
+	
+
+
+/* styles for navigation */
+nav { text-align: center; /* align text to the center */ 
+		font-size: 1em; /* set font size */
+		backdrop-filter: blur(30px);
+		box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+		border: 2px solid rgba(255, 255, 255, 0.18);
+		
+		}
+nav a { text-decoration: none; /* remove underline from links */
+}
+/* for nav links*/
+nav a:link {
+	color: #330000; /*link color*/
+}
+nav a:visited { color: #44576D; /*visited link color */
+}
+nav a:hover { color: #768A96; /* hover link color */
+}
+nav ul {
+	list-style-type: none; /*takes away list markers*/
+	padding: 0; /*sets left padding to 0*/
+	margin: 0; /*remove default margin*/
+	font-size: 1.25em; /* set font size */
+	display: flex; /* use flexbox*/
+	flex-direction: column; /* arrange items in column*/
+}
+nav li { border-bottom: 1px solid #FEF6C2; /*add bottom border*/
+		padding: .5em 1em; /*add padding*/
+width: 100%; /*set width*/ }
+
+/* styles for the main content */ 
+main { background-color: #DFEBF6; /* set background color */
+         display: block; /* display as block element */
+		padding: 1px 20px 20px 20px; /* set padding */ 
+}
+/* styles for the main image */
+main img { float: right; /* set right float */
+              padding: 20px; /* set padding */
+}
+
+/* styles for the footer */
+footer { background-color: #DFEBF6; /* set background color */
+       margin-left: 200px; /* set left margin */
+       padding: 20px; /* set padding */
+       text-align: center; /* align text to center */
+	   font-size: small; /* set font size */
+	   font-style: italic; /* set font styles to italic */
+}
+
+/* styles for details*/
+.details {
+  grid-template-columns: repeat(2, 1fr); /*add grid template columns*/
+  display: grid; /*add grid*/
+  place-content: center; /*center content*/
+  gap: .5rem; /*add gap*/
+}
+
+.details img {
+	display: grid; /*add grid*/
+  grid-template-columns: repeat(2, 1fr); /*add grid template columns*/
+  border-radius: 1rem; /*add border radius*/
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2); /*add box shadow*/
+}
+
+
+/*styles for mobile*/
+#mobile { display: inline; /* display as inline*/}
+
+/*styles for desktop*/
+#desktop {display: none; /* hide element*/}
+
+/* table styles */
+table {
+	margin: auto; /*center the table */
+	width: 90%; /* set width to 90% of the container */
+	border-spacing: 0; /* remove spacing between table cells */ }
+
+th,td {
+	padding: 10px; /* add padding to table cells */
+}
+tr:nth-of-type(odd) {
+	background-color: #AAC7D8; /* background color for odd rows */
+}
+
+form {
+	display:flex; /* use flexbox*/
+	flex-direction: column; /* arrange items in a column */
+	padding-left: 1em; /* add left padding */
+	width: 80%; /* set width*/
+}
+
+form {
+	width: 40%; /*set width*/
+	display: grid; /*use grid layout*/
+	grid-gap: 1em; /*set gap between grid items*/
+	gap: 1em; /*set gap*/
+	grid-template-columns: 6em 1fr; /*define grid template columns*/
+}
+input[type="submit"] {
+	grid-column: 2 / 3; /*set grid column span*/
+	width: 9em; /*set width*/
+}
+
+/*media query for desktop*/
+@media (min-width: 600px) {
+	header { padding-left: 0; /* remove left padding*/
+	text-align: center; /*align text*/}
+	
+	h1 { font-size: 3em; /*font size for h1*/}
+	nav ul { flex-flow: row nowrap; /*arrange items in a single row*/ }
+	nav li { border-bottom: none; /* remove bottom boarder*/}
+	
+#heromugs {
+background-image: url(../images/room1.jpg); /* change background image */}
+	
+#homehero	{
+	background-image: url(../images/outside.jpg); /* change background image */
+		}
+	
+#heroguitar {
+background-image: url(../images/room2.jpg); /* change background image */}
+#flow { display: flex; /*use flexbox*/
+flex-direction: row; /* arrange items in row*/}
+#mobile { display: none; /*hide element*/}
+#desktop { display: inline; /*display as inline element*/}
+
+
+/*media query for large screens*/
+@media (min-width: 1024px) {
+	@supports (display: grid) {
+		header { grid-area: header; /*set grid area*/}
+		nav {grid-area: nav; /*set grid area*/}
+		main{grid-area: main; /*set grid area*/}
+		footer{grid-area: footer; /*set grid area*/}
+		#wrapper { display: grid; /* use grid layout*/
+			grid-template:
+				"header header"
+				"nav    main"
+				"footer footer"
+				/200px;/* set grid template*/}
+			
+		nav ul { flex-direction: column; /* arrange items in a column}*/}
+	
+
+			
+		
+		
+} } }
+
+
+
+
+.gallery {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery img {
+  width: 70%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  transition: all ease-out 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery img:hover {
+  width: 90%;
+}
+
+
+
+
+
