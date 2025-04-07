@@ -28,7 +28,7 @@
   <h2>This is the Contact Page </h2>
   <p>You can contact us by calling "555-555-5555" or by filling this form.
   <!-- job application form-->
-		<form method="post" action="https://webdevbasics.net/scripts/javajam8.php">
+		<form id ="job-application-form" method="post" action="https://webdevbasics.net/scripts/javajam8.php">
 			<label for="myName">Name: </label>
 			<input type="text" id="myName" name="myName" required>
 			<label for="myEmail">E-mail: </label>
@@ -41,12 +41,15 @@
 			<input type="submit" value="Apply Now">
 		
 		</form>
-
+<!-- for error or success message -->	  
+<div id ="message"></div>
   </main>
   <!-- footer section -->
   <footer>
   Copyright &copy; 2024 WebMaster
   </footer>
+ <!-- link script --> 
+<script src="errorh.js" defer></script>
 </div>
 </body>
 </html>
