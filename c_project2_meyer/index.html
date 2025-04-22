@@ -37,7 +37,25 @@
   
   <img src="images/outside.jpg" alt="Villa Scenery" width="400" height="200">
   
+  <div> <h2> Book A Room Now </h2>
+  <label for="name">Name: </label>
+			<input type="text" id="name" />
+			<label for="email">E-mail: </label>
+			<input type="email" id="email" />
+			<label for="room"> select room:</label>
+			<select id ="room">
+			<option value="Oceanview">Oceanview ($350-450)</option>
+			<option value ="adventure">adventure ($250-350)</option></select>
+			<label for="date">Book date:</label>
+			<input type="date" id="date"/>
+			<button onclick="handleBooking()">Book room</button>
+			<div id="result"></div>
+			<script src="booking.js" defer></script>
+			<script src="main.js" defer></script>
+			
   
+  
+  </div>
   <!-- contact information -->
 		<div>
 			12010 Garrett Bay Road<br>
