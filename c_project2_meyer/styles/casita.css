@@ -213,6 +213,21 @@ flex-direction: row; /* arrange items in row*/}
   width: 90%;
 }
 
+article {
+	background: #AAC7D8;
+    padding: 20px 0;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+
+
+div#displayMap {
+	width: 50%;
+    padding-bottom: 40%;
+    height: 0;
+    margin: 10px auto;
+    border: 3px solid black;
+}
 
 
 
