@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="styles/casita.css" rel="stylesheet">
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyA4-a0-Cky31xCiqy6oty-oRzoZDxLqg&callback=initMap"></script>
+<script src="api.js" defer></script>
 
 <body>
 <!-- wrapper -->
@@ -41,14 +43,24 @@
 			<input type="submit" value="Apply Now">
 		
 		</form>
-<!-- for error or success message -->	  
+		<!-- for error or success message -->
 <div id ="message"></div>
   </main>
+  
+   <h2>Google map API</h2>
+    <article id ="setup">
+	<div id ="displayMap"></div>
+      <p><h3>current location:</h3></p>
+        <p><span id="lat"></span></p>
+		<p><span id="lng"></span></p>
+		<p><span id="alt"></span></p>
+		
+       
   <!-- footer section -->
   <footer>
   Copyright &copy; 2024 WebMaster
   </footer>
- <!-- link script --> 
+  <!-- link script -->
 <script src="errorh.js" defer></script>
 </div>
 </body>
